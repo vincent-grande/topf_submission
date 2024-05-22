@@ -10,3 +10,7 @@ TOPF requires Python and julia. To install the required python and julia package
         source .venv/bin/activate
         pip install -r requirements.txt
         julia --project=TestJuliaEnvironment -e 'using Pkg; Pkg.instantiate()'
+
+## Credits
+
+For all the credits and copyright information, see the main paper.
