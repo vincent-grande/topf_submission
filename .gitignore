@@ -1,0 +1,4 @@
+.venv
+ProteinFiles
+__pycache__
+/JuliaCommunication/*.csv
