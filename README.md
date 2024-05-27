@@ -6,10 +6,10 @@ This repository contains the code for Topological Point Features (TOPF) with som
 
 TOPF requires Python and julia. To install the required python and julia packages, do the following
 
-        python3 -m venv .venv
-        source .venv/bin/activate
-        pip install -r requirements.txt
-        julia --project=TestJuliaEnvironment -e 'using Pkg; Pkg.instantiate()'
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+    julia --project=TestJuliaEnvironment -e 'using Pkg; Pkg.instantiate()'
 
 ## Credits
 
