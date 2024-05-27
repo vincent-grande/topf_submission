@@ -88,6 +88,7 @@ def topf_run(base_points, complex_type = 'alpha', thresh_julia = 0, max_hom_dim 
     """
         One Run of the entire TOPF algorithm.
     """
+    base_points = noisify_input_points(np.array(base_points)) #To prevent numerical instabilities with alpha filtration
     num_old_base_points = len(base_points)
     if add_convex_hull:
         base_points = np.concatenate((base_points, construct_convex_hull(base_points, density_coeff = convex_hull_density_coeff)), axis = 0)
@@ -160,6 +161,12 @@ def topf_run(base_points, complex_type = 'alpha', thresh_julia = 0, max_hom_dim 
         else:
             plot_signatures(base_points,short_flat_signatures_s)
     return labels, short_flat_signatures
+
+def noisify_input_points(base_points, noise_level= 0.00001):
+    """
+        Adds noise to the points.
+    """
+    return base_points + noise_level * np.random.normal(size=base_points.shape) * np.std(base_points)
 
 def my_colour_maps_strings():
     """
